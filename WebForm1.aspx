@@ -1,30 +1,21 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="_28_Dec.WebForm1" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-     <script src="Scripts/sweetalert.min.js"></script>
-    <link href="Styles/sweetalert.css" rel="stylesheet" />
-    
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="_1_2.WebForm1" %>
 
-             <ContentTemplate>
-                 <form>
-  <div class="form-group">
-    <label for="formGroupExampleInput">Name :</label>
-      <asp:TextBox ID="TextBox1" runat="server" class="form-control" placeholder="Example input"></asp:TextBox>
-    
-  </div>
-  <div class="form-group">
-    <label for="formGroupExampleInput2">Another label</label>
-      <asp:TextBox ID="TextBox2" runat="server" class="form-control" placeholder="Example input"></asp:TextBox>
-    
-  </div>
-</form>
-                 
-                 
-                 <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
-                 <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-             </ContentTemplate>
+<%@ Register src="WebUserControl1.ascx" tagname="WebUserControl1" tagprefix="uc1" %>
 
-         </asp:UpdatePanel>
-</asp:Content>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div >
+            <uc1:WebUserControl1 ID="WebUserControl11" runat="server" />
+        </div>
+
+
+        
+    </form>
+</body>
+</html>
